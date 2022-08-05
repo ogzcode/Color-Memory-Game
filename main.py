@@ -18,13 +18,12 @@ class ColorBrick:
         self.state = False
         self.image = image
         self.open_side = pygame.transform.scale(pygame.image.load(image), (48,48))
-        self.close_side = pygame.transform.scale(pygame.image.load("close.png"), (48,48))
+        self.close_side = pygame.transform.scale(pygame.image.load("Sprite/sprite_0.png"), (48,48))
         self.state_clock = 0
         self.find = False
 
     def draw(self, screen):
         if self.state:
-            #pygame.draw.rect(screen, self.color, self.rect)
             SCREEN.blit(self.open_side, self.rect)
 
             if self.state_clock > 0 and not self.find:
